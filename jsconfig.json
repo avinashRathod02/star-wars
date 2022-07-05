@@ -10,7 +10,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
-      
+      "screens*": ["src/screens/*"],
+      "stores*": ["src/stores/*"]
     }
   }
 }

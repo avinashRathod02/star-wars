@@ -1,13 +1,13 @@
-import React from "react";
+import { routes } from "./navigation-routes";
+import { CommonNavigator } from "./navigators";
+import colors from "@/colors";
 import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { routes } from "./navigation-routes";
-import colors from "@/colors";
-import { CommonNavigator, } from "./navigators";
+import React from "react";
 
 const Stack = createStackNavigator();
 
-export const ApplicationNavigator= (props) => {
+export const ApplicationNavigator = (props) => {
   const MyTheme = {
     ...DefaultTheme,
     colors: {
@@ -18,11 +18,8 @@ export const ApplicationNavigator= (props) => {
 
   return (
     <NavigationContainer theme={MyTheme}>
-      <Stack.Navigator
-        headerMode='none'
-        initialRouteName={routes.MOVIES_LIST }
-      >
-        <CommonNavigator/>
+      <Stack.Navigator headerMode='none' initialRouteName={routes.MOVIES}>
+        {CommonNavigator()}
       </Stack.Navigator>
     </NavigationContainer>
   );
