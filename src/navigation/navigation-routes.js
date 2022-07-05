@@ -1,0 +1,6 @@
+export const routes = {
+  
+  LOGIN: "LOGIN",
+  MOVIES_LIST: "MOVIES_LIST",
+  MOVIE_INFORMATION: "MOVIE_INFORMATION",
+};
