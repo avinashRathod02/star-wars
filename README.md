@@ -15,3 +15,6 @@
 - Android APK : expo build:android -t apk --release-channel production
 - Android bundle: expo build:android -t app-bundle --release-channel production
 - Publish: expo publish --release-channel=development
+
+
+<img src="assets/ezgif-1-70c75be935.gif" width="32%"/> 
