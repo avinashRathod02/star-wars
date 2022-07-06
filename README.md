@@ -16,5 +16,5 @@
 - Android bundle: expo build:android -t app-bundle --release-channel production
 - Publish: expo publish --release-channel=development
 
-
+<br /><br />
 <img src="assets/ezgif-1-70c75be935.gif" width="32%"/> 
