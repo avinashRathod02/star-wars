@@ -1,10 +1,10 @@
-import { STAR_WARS_API_URL } from "@/config";
-import axios from "axios";
+import { STAR_WARS_API_URL } from '@/config';
+import axios from 'axios';
 
 export const request = async (query) => {
   try {
     return await axios({
-      method: "post",
+      method: 'post',
       url: STAR_WARS_API_URL,
       data: { query },
     })

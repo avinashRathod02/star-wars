@@ -1,3 +1,4 @@
+import App from './src';
+import React from 'react';
 
-import App from './src'
-export default App
+export default App;

@@ -1,9 +1,9 @@
-import { routes } from "./navigation-routes";
-import { CommonNavigator } from "./navigators";
-import colors from "@/colors";
-import { DefaultTheme, NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import React from "react";
+import { routes } from './navigation-routes';
+import { CommonNavigator } from './navigators';
+import colors from '@/colors';
+import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +18,7 @@ export const ApplicationNavigator = (props) => {
 
   return (
     <NavigationContainer theme={MyTheme}>
-      <Stack.Navigator headerMode='none' initialRouteName={routes.MOVIES}>
+      <Stack.Navigator headerMode='none' initialRouteName={routes.LOGIN}>
         {CommonNavigator()}
       </Stack.Navigator>
     </NavigationContainer>

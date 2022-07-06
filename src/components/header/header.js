@@ -1,7 +1,7 @@
-import colors from "@/colors";
-import React from "react";
-import { StatusBar, StyleSheet } from "react-native";
-import { View, Text, TouchableOpacity } from "react-native";
+import colors from '@/colors';
+import React from 'react';
+import { StatusBar, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 export default (props) => {
   const { leftIconPress, title, backgroundColor = colors.primary } = props;
@@ -13,7 +13,7 @@ export default (props) => {
     return (
       <View style={styles.icon}>
         <TouchableOpacity onPress={leftIconPress}>
-          <Text>{"< Go Back"}</Text>
+          <Text style={styles.title}>{'⇦'}</Text>
         </TouchableOpacity>
       </View>
     );
@@ -21,9 +21,7 @@ export default (props) => {
 
   const CENTER_COMPONENT = (
     <View style={[styles.icon, { flex: 3 }]}>
-      <Text style={styles.title} show={title}>
-        {title}
-      </Text>
+      <Text style={styles.title}>{title}</Text>
     </View>
   );
 
@@ -32,29 +30,31 @@ export default (props) => {
       <StatusBar backgroundColor={colors.primary} barStyle='light-content' />
       {LEFT_COMPONENT()}
       {CENTER_COMPONENT}
+      <View style={styles.icon} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: "87%",
-    alignSelf: "center",
+    width: '87%',
+    alignSelf: 'center',
   },
   title: {
-    fontSize: 16,
+    fontSize: 18,
     color: colors.white,
+    fontWeight: '600',
   },
   icon: {
     flex: 1,
-    alignItems: "center",
+    alignItems: 'center',
   },
   cont: {
     paddingTop: (StatusBar.currentHeight / 100) * 7 + 40,
-    width: "100%",
-    paddingBottom: "2.5%",
+    width: '100%',
+    paddingBottom: '2.5%',
     backgroundColor: colors.primary,
-    flexDirection: "row",
-    justifyContent: "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });
